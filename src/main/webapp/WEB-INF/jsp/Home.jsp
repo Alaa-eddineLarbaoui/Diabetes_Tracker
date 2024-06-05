@@ -12,7 +12,12 @@
 </head>
 <body>
 <p>hello alaa </p>
+<form method="post" action="save">
+    <input type="date" name="date_of_Tracking" >
+    <input type="time" name="time_of_tracking" >
+    <input type="number" name="value_Glucose" >
+   <button type="submit">add</button>
+</form>
 
-<h2>${message}</h2>
 </body>
 </html>

@@ -1,6 +1,7 @@
 package com.Config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -17,7 +18,8 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.Config")
+@ComponentScan(basePackages = "com")
+@EnableJpaRepositories(basePackages = "com.Repository")
 public class PersistenceJPAConfig {
 
     @Bean
@@ -37,9 +39,9 @@ public class PersistenceJPAConfig {
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/diabetesTracker?createDatabaseIfNotExist=true");
-        dataSource.setUsername( "root" );
-        dataSource.setPassword( "alaa2001.." );
+        dataSource.setUrl("jdbc:mysql://localhost:3306/diabetesTracker");
+        dataSource.setUsername("root");
+        dataSource.setPassword("alaa2001..");
         return dataSource;
     }
 
