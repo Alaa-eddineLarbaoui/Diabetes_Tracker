@@ -47,4 +47,18 @@ public class DiabeteController {
 
         return "hello_world";
     }
+
+    @RequestMapping("/ShowInfo")
+    public String show(Model model){
+       // model.addAttribute("diabete",new GlucoseReading());
+        model.addAttribute("Diabetes",  glucoseDAO.ShowDiabetes());
+        return "Show";
+    }
+
+    @RequestMapping("/delete")
+    public String deleteInfos(@RequestParam("id") int idS, Model model) {
+        glucoseDAO.delete(idS);
+        return "Show";
+    }
+
 }

@@ -18,6 +18,8 @@
     <input type="number" name="value_Glucose" >
    <button type="submit">add</button>
 </form>
-
+<a href="/DiabetesTracker_war_exploded/ShowInfo">
+    Page show
+</a>
 </body>
 </html>
