@@ -58,6 +58,7 @@ public class DiabeteController {
     @RequestMapping("/delete")
     public String deleteInfos(@RequestParam("id") int idS, Model model) {
         glucoseDAO.delete(idS);
+        model.addAttribute("Diabetes",  glucoseDAO.ShowDiabetes());
         return "Show";
     }
 
