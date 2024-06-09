@@ -10,8 +10,48 @@
 <html>
 <head>
     <title>Title</title>
+    <style><%@ include file="Style.css"%></style>
 </head>
 <body>
+
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>Diabete Tracker</span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Registration</a></li>
+                <li><a href="#">Chart</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Business</a></li>
+            </ul>
+        </nav>
+        <div class="buttons">
+            <a href="#" class="btn btn-signup">SIGN UP</a>
+            <a href="#" class="btn btn-signin">SIGN IN</a>
+        </div>
+    </div>
+    <div class="titre">
+        <h1 class="page-title">Food Search</h1>
+    </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <label for="types">Choisissez un type :</label>
 <select id="types" name="types">
@@ -19,14 +59,14 @@
     <option value="fruits">Fruits</option>
     <option value="legumes">Légumes</option>
 </select>
-
-<p>hello alaa </p>
 <form method="post" action="save">
     <input type="date" name="date_of_Tracking">
     <input type="time" name="time_of_tracking">
     <input type="number" name="value_Glucose">
     <button type="submit">add</button>
 </form>
+
+
 <a href="/DiabetesTracker_war_exploded/ShowInfo">
     Page show
 </a>
