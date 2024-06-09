@@ -25,6 +25,11 @@ public class DiabeteController {
         model.addAttribute("glucose", new GlucoseReading());
         return "Home";
     }
+    @RequestMapping(value = "/Registration")
+    public String Registration(Model model) {
+        model.addAttribute("glucose", new GlucoseReading());
+        return "Registration";
+    }
 
     @PostMapping(value = "/save")
     public String save(@RequestParam("date_of_Tracking") String date_of_Tracking,
@@ -45,7 +50,7 @@ public class DiabeteController {
         // Save the GlucoseReading object
         glucoseDAO.Add(glucose);
 
-        return "hello_world";
+        return "Registration";
     }
 
     @RequestMapping("/ShowInfo")

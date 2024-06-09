@@ -24,7 +24,7 @@
         <nav class="nav">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Registration</a></li>
+                <li><a href="/DiabetesTracker_war_exploded/Registration" >Registration</a></li>
                 <li><a href="#">Chart</a></li>
                 <li><a href="#">Food</a></li>
                 <li><a href="#">Business</a></li>
@@ -59,12 +59,7 @@
     <option value="fruits">Fruits</option>
     <option value="legumes">Légumes</option>
 </select>
-<form method="post" action="save">
-    <input type="date" name="date_of_Tracking">
-    <input type="time" name="time_of_tracking">
-    <input type="number" name="value_Glucose">
-    <button type="submit">add</button>
-</form>
+
 
 
 <a href="/DiabetesTracker_war_exploded/ShowInfo">
