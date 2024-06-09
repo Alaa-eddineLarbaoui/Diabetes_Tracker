@@ -9,12 +9,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style><%@ include file="Style.css"%></style>
 </head>
-<body>
 
 
+<body class="body">
 <header class="header">
     <div class="container">
         <div class="logo">
@@ -22,12 +26,23 @@
             <span>Diabete Tracker</span>
         </div>
         <nav class="nav">
-            <ul>
+            <ul class="ul">
                 <li><a href="#">Home</a></li>
-                <li><a href="/DiabetesTracker_war_exploded/Registration" >Registration</a></li>
+                <li><a href="#">Registration</a></li>
                 <li><a href="#">Chart</a></li>
-                <li><a href="#">Food</a></li>
-                <li><a href="#">Business</a></li>
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+
+                    <ul class="dropdown-menu" style="">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+
+                <li><a href="#">Conseils</a></li>
             </ul>
         </nav>
         <div class="buttons">
@@ -36,35 +51,18 @@
         </div>
     </div>
     <div class="titre">
-        <h1 class="page-title">Food Search</h1>
+        <img class="img-header" src="IMAGE LINKDEEN.jpg" alt="">
+        <div class="about">
+            <h1>hello test tetst vdgqg dtvsdvsdb <br>hrfhhdfh hfhhf hfhdhhdf </h1>
+        </div>
     </div>
-
 </header>
+<!-- Votre contenu -->
+<h1>hello</h1>
+<h1 class="ti"> hello alaa </h1>
+<!-- Inclure Bootstrap JS -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-<label for="types">Choisissez un type :</label>
-<select id="types" name="types">
-    <option value="viandes">Viandes</option>
-    <option value="fruits">Fruits</option>
-    <option value="legumes">Légumes</option>
-</select>
-
-
-
-<a href="/DiabetesTracker_war_exploded/ShowInfo">
-    Page show
-</a>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

@@ -16,19 +16,20 @@
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
-        background-color: #ffddd3;
+        /*background-color: #ffddd3;*/
+        background-color: #fff;
 
 
     }
     .header {
-        background-color: #2D799C;
+        background-color: #0aa447;
         color: white;
         padding: 10px 0;
         border-bottom-right-radius: 100rem 5rem;
         border-bottom-left-radius: 100rem 5rem;
     }
 
-    .container {
+    .container1 {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -109,10 +110,10 @@
 
     .page-title {
         text-align: center;
-        background-color: #2D799C;
+
         color: white;
         padding: 20px 0;
-        font-size: 3rem; /* La valeur la plus grande est conservée */
+        font-size: 3rem;
         letter-spacing: -.04em;
         line-height: 1.2;
         margin-bottom: .5rem;
@@ -127,7 +128,75 @@
 
     }
 
+    /* le style de formulaire d'enregistrement :  */
 
+    .container {
+        width: 100%;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #FCEDE9;
+        border-top-right-radius: 100rem 5rem;
+        border-top-left-radius: 100rem 5rem;
+        max-width: none;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="date"],
+    input[type="time"],
+    input[type="number"],
+    button[type="submit"] {
+        margin: 10px 0;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    .input {
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .input div {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+
+    .input div:last-child {
+        margin-right: 0;
+    }
+    .btn2{
+        display: flex;
+        justify-content: end;
+        width: 60%;
+    }
 
 
 
@@ -137,7 +206,7 @@
 <body>
 
 <header class="header">
-    <div class="container">
+    <div class="container1">
         <div class="logo">
             <img src="logo.png" alt="Logo">
             <span>Diabete Tracker</span>
@@ -147,20 +216,22 @@
                 <li><a class="a" href="/DiabetesTracker_war_exploded/">Home</a></li>
                 <li><a class="a" href="#">Registration</a></li>
                 <li><a class="a"  href="#">Chart</a></li>
+
                 <div class="dropdown">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown link
+                        Food
                     </a>
-
                     <ul class="dropdown-menu" style="">
-                        <li><a class="dropdown-item" href="#">Via</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">meats</a></li>
+                        <li><a class="dropdown-item" href="#">fruits</a></li>
+                        <li><a class="dropdown-item" href="#">vegetables</a></li>
                     </ul>
                 </div>
 
                 <li><a class="a"  href="#">Conseils</a></li>
             </ul>
+
+
         </nav>
         <div class="buttons">
             <a href="#" class="btn btn-signup">SIGN UP</a>
@@ -168,19 +239,35 @@
         </div>
     </div>
     <div class="titre">
-        <h1 class="page-title">registration</h1>
+        <h1 class="page-title">Food</h1>
     </div>
 
 </header>
 
 
+<div class="container">
+    <h1>Formulaire de suivi du diabète</h1>
+    <form method="post" action="save">
 
-<form method="post" action="save">
-    <input type="date" name="date_of_Tracking">
-    <input type="time" name="time_of_tracking">
-    <input type="number" name="value_Glucose">
-    <button type="submit">add</button>
-</form>
+
+        <div class="input">
+            <div>
+                <input type="date" name="date_of_Tracking" required>
+            </div>
+            <div>
+                <input type="time" name="time_of_tracking" required>
+            </div>
+            <div>
+                <input type="number" name="value_Glucose" placeholder="Niveau de glucose (mg/dL)" required>
+            </div>
+        </div>
+
+        <div class="btn2">
+            <button type="submit">Ajouter</button>
+        </div>
+
+    </form>
+</div>
 
 
 <a href="/DiabetesTracker_war_exploded/ShowInfo">
