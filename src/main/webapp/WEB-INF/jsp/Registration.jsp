@@ -7,6 +7,9 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Registration</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 
 </head>
 <style>
@@ -27,6 +30,7 @@
         padding: 10px 0;
         border-bottom-right-radius: 100rem 5rem;
         border-bottom-left-radius: 100rem 5rem;
+
     }
 
     .container1 {
@@ -137,8 +141,7 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         background-color: #FCEDE9;
-        border-top-right-radius: 100rem 5rem;
-        border-top-left-radius: 100rem 5rem;
+
         max-width: none;
     }
 
@@ -215,6 +218,7 @@
             <ul class="ul">
                 <li><a class="a" href="/DiabetesTracker_war_exploded/">Home</a></li>
                 <li><a class="a" href="#">Registration</a></li>
+                <li><a class="a" href="/DiabetesTracker_war_exploded/ShowInfo" >Show</a></li>
                 <li><a class="a"  href="/DiabetesTracker_war_exploded/Showchart">Chart</a></li>
 
                 <div class="dropdown">
@@ -222,11 +226,12 @@
                         Food
                     </a>
                     <ul class="dropdown-menu" style="">
-                        <li><a class="dropdown-item" href="#">meats</a></li>
-                        <li><a class="dropdown-item" href="#">fruits</a></li>
-                        <li><a class="dropdown-item" href="#">vegetables</a></li>
+                        <li><a class="dropdown-item" href="ShowNourriture?id=1">meat</a></li>
+                        <li><a class="dropdown-item" href="ShowNourriture?id=2">fruits</a></li>
+                        <li><a class="dropdown-item"  href="ShowNourriture?id=3">vegetables</a></li>
                     </ul>
                 </div>
+
 
                 <li><a class="a"  href="#">Conseils</a></li>
             </ul>
@@ -263,7 +268,9 @@
         </div>
 
         <div class="btn2">
-            <button type="submit">Ajouter</button>
+            <button type="submit">
+                Ajouter <i class="bi bi-plus"></i>
+            </button>
         </div>
 
     </form>

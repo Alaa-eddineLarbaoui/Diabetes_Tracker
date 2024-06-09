@@ -26,6 +26,7 @@
             <ul class="ul">
                 <li><a class="a" href="/DiabetesTracker_war_exploded/">Home</a></li>
                 <li><a class="a" href="/DiabetesTracker_war_exploded/Registration">Registration</a></li>
+                <li><a class="a" href="/DiabetesTracker_war_exploded/ShowInfo" >Show</a></li>
                 <li><a class="a"  href="/DiabetesTracker_war_exploded/Showchart">Chart</a></li>
 
                 <div class="dropdown">
@@ -36,7 +37,7 @@
                         <li><a class="dropdown-item" href="ShowNourriture?id=1">meat</a></li>
                         <li><a class="dropdown-item" href="ShowNourriture?id=2">fruits</a></li>
 
-                        <li><a class="dropdown-item" href="#">vegetables</a></li>
+                        <li><a class="dropdown-item"  href="ShowNourriture?id=3">vegetables</a></li>
                     </ul>
                 </div>
 
@@ -51,7 +52,7 @@
         </div>
     </div>
     <div class="titre">
-        <img class="img-header" src="IMAGE LINKDEEN.jpg" alt="">
+        <img class="img-header" src="https://cdn.natur-house.ro/wp-connt/uploads/2016/09/natur-house-dieta-pentru-diabetici.jpg" alt="">
         <div class="about">
             <h1>hello test tetst vdgqg dtvsdvsdb <br>hrfhhdfh hfhhf hfhdhhdf </h1>
         </div>

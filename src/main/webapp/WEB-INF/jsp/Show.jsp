@@ -5,6 +5,8 @@
     <title>Show infos of tracking</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
 
         /* le style de header */
@@ -151,6 +153,7 @@
             <ul class="ul">
                 <li><a class="a" href="/DiabetesTracker_war_exploded/">Home</a></li>
                 <li><a class="a" href="/DiabetesTracker_war_exploded/Registration">Registration</a></li>
+                <li><a class="a" href="/DiabetesTracker_war_exploded/ShowInfo" >Show</a></li>
                 <li><a class="a"  href="/DiabetesTracker_war_exploded/Showchart">Chart</a></li>
 
                 <div class="dropdown">
@@ -158,9 +161,9 @@
                         Food
                     </a>
                     <ul class="dropdown-menu" style="">
-                        <li><a class="dropdown-item" href="#">meats</a></li>
-                        <li><a class="dropdown-item" href="#">fruits</a></li>
-                        <li><a class="dropdown-item" href="#">vegetables</a></li>
+                        <li><a class="dropdown-item" href="ShowNourriture?id=1">meat</a></li>
+                        <li><a class="dropdown-item" href="ShowNourriture?id=2">fruits</a></li>
+                        <li><a class="dropdown-item"  href="ShowNourriture?id=3">vegetables</a></li>
                     </ul>
                 </div>
 
@@ -179,7 +182,6 @@
     </div>
 
 </header>
-
 
 <div class="container">
     <div class="row">
