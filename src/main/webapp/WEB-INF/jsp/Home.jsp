@@ -1,16 +1,13 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 04/06/2024
-  Time: 10:12
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
+
 <html>
 <head>
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -20,30 +17,32 @@
 
 <body class="body">
 <header class="header">
-    <div class="container">
+    <div class="container1">
         <div class="logo">
             <img src="logo.png" alt="Logo">
             <span>Diabete Tracker</span>
         </div>
         <nav class="nav">
             <ul class="ul">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Registration</a></li>
-                <li><a href="#">Chart</a></li>
+                <li><a class="a" href="/DiabetesTracker_war_exploded/">Home</a></li>
+                <li><a class="a" href="/DiabetesTracker_war_exploded/Registration">Registration</a></li>
+                <li><a class="a"  href="/DiabetesTracker_war_exploded/Showchart">Chart</a></li>
+
                 <div class="dropdown">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown link
+                        Food
                     </a>
-
                     <ul class="dropdown-menu" style="">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">meats</a></li>
+                        <li><a class="dropdown-item" href="#">fruits</a></li>
+                        <li><a class="dropdown-item" href="#">vegetables</a></li>
                     </ul>
                 </div>
 
-                <li><a href="#">Conseils</a></li>
+                <li><a class="a"  href="#">Conseils</a></li>
             </ul>
+
+
         </nav>
         <div class="buttons">
             <a href="#" class="btn btn-signup">SIGN UP</a>
@@ -57,10 +56,47 @@
         </div>
     </div>
 </header>
-<!-- Votre contenu -->
-<h1>hello</h1>
-<h1 class="ti"> hello alaa </h1>
-<!-- Inclure Bootstrap JS -->
+
+
+
+<div class="container text-center my-5">
+    <h2>Ce que nous offrons à nos clients</h2>
+    <p class="text-muted">Construisez l'avenir avec notre application de gestion de projets de construction, efficace et durable.</p>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card1">
+                <div class="card-body">
+                    <h5 class="card-title">Gestion de Projet</h5>
+                    <p class="card-text">
+                        La gestion des projets consiste à planifier, organiser et suivre toutes les activités nécessaires pour atteindre les objectifs d'un projet.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card1">
+                <div class="card-body">
+                    <h5 class="card-title">Gestion des Taches</h5>
+                    <p class="card-text">
+                        La gestion des tâches consiste à planifier, organiser et suivre toutes les activités nécessaires pour atteindre les objectifs d'un projet.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card1">
+                <div class="card-body">
+                    <h5 class="card-title">Gestion des Ressources</h5>
+                    <p class="card-text">
+                        La gestion des ressources implique la planification, l'allocation et le suivi des ressources nécessaires à un projet, comme le personnel, les matériaux et le temps.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 
 
@@ -73,7 +109,7 @@
             if (selectedValue === 'viandes') {
                 window.location.href = '/DiabetesTracker_war_exploded/ShowInfo';
             }
-            // Ajoutez d'autres conditions si nécessaire pour les autres options
+
         });
     });
 </script>

@@ -1,15 +1,23 @@
-<!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Registration</title>
-
+    <title>Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>Registration</title>
+    <title>Chart</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </head>
 <style>
+    .chart-container {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        height: 500px;
+    }
+
+    /*  Style of Header */
 
 
     body, html {
@@ -127,83 +135,9 @@
         margin-top: 20px;
 
     }
-
-    /* le style de formulaire d'enregistrement :  */
-
-    .container {
-        width: 100%;
-        margin: 50px auto;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        background-color: #FCEDE9;
-        border-top-right-radius: 100rem 5rem;
-        border-top-left-radius: 100rem 5rem;
-        max-width: none;
-    }
-
-    h1 {
-        text-align: center;
-        color: #333;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    input[type="date"],
-    input[type="time"],
-    input[type="number"],
-    button[type="submit"] {
-        margin: 10px 0;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-
-    button[type="submit"] {
-        background-color: #007bff;
-        color: #fff;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    button[type="submit"]:hover {
-        background-color: #0056b3;
-    }
-
-    .input {
-        display: flex;
-        justify-content: space-between;
-        width: 65%;
-        align-items: center;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .input div {
-        flex-grow: 1;
-        margin-right: 10px;
-    }
-
-    .input div:last-child {
-        margin-right: 0;
-    }
-    .btn2{
-        display: flex;
-        justify-content: end;
-        width: 60%;
-    }
-
-
-
-
-
 </style>
 <body>
+
 
 <header class="header">
     <div class="container1">
@@ -214,7 +148,7 @@
         <nav class="nav">
             <ul class="ul">
                 <li><a class="a" href="/DiabetesTracker_war_exploded/">Home</a></li>
-                <li><a class="a" href="#">Registration</a></li>
+                <li><a class="a" href="/DiabetesTracker_war_exploded/Registration">Registration</a></li>
                 <li><a class="a"  href="/DiabetesTracker_war_exploded/Showchart">Chart</a></li>
 
                 <div class="dropdown">
@@ -245,33 +179,58 @@
 </header>
 
 
-<div class="container">
-    <h1>Formulaire de suivi du diabète</h1>
-    <form method="post" action="save">
 
-
-        <div class="input">
-            <div>
-                <input type="date" name="date_of_Tracking" required>
-            </div>
-            <div>
-                <input type="time" name="time_of_tracking" required>
-            </div>
-            <div>
-                <input type="number" name="value_Glucose" placeholder="Niveau de glucose (mg/dL)" required>
-            </div>
-        </div>
-
-        <div class="btn2">
-            <button type="submit">Ajouter</button>
-        </div>
-
-    </form>
+<div class="chart-container mt-5">
+    <canvas id="myChart"></canvas>
 </div>
+<script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const labels = [
+            <c:forEach var="gl" items="${Diabetes}" varStatus="status">
+            "${gl.getDate_of_Tracking()}"<c:if test="${!status.last}">,</c:if>
+            </c:forEach>
+        ];
+        const dataBefore = [
+            <c:forEach var="gl" items="${Diabetes}" varStatus="status">
+            ${gl.getValue_Glucose()}<c:if test="${!status.last}">,</c:if>
+            </c:forEach>
+        ];
 
 
-<a href="/DiabetesTracker_war_exploded/ShowInfo">
-    Page show
-</a>
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Valeur Before',
+                    data: dataBefore,
+                    fill: true,
+                    borderColor: 'rgb(255, 99, 132)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                }
+            ]
+        };
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Glycemie Levels Over Time'
+                    }
+                }
+            },
+        };
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        new Chart(ctx, config);
+    });
+</script>
 </body>
 </html>

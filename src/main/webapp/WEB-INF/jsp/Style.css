@@ -5,12 +5,12 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     /*background-color: #ffddd3;*/
-    background-color: #ffddd3;
+    background-color: #fff;
 
 
 }
 .header {
-    background-color: #2D799C;
+    background-color: #0aa447;
     color: white;
     padding: 10px 0;
     border-bottom-right-radius: 100rem 5rem;
@@ -20,7 +20,7 @@ body, html {
 }
 
 
-.container {
+.container1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,15 +55,16 @@ body, html {
     margin: 0 15px;
 }
 
-.nav ul li a {
+.a {
     color: white;
     text-decoration: none;
     font-size: 1em;
 }
 
-.nav ul li a:hover {
+.a:hover {
     text-decoration: underline;
 }
+
 
 .buttons {
     display: flex;
@@ -132,6 +133,39 @@ body, html {
 }
 .ti{
     height: 900px;
+}
+
+
+/*  les cards de services */
+
+.card1 {
+    border: none;
+    box-shadow:0 1px 5px #212020;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgb(12, 255, 80);
+}
+
+.card1-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card1-text {
+    font-size: 1rem;
+    color: #666;
+}
+.container.text-center.my-5 {
+    color: black;
+}
+
+
+p.text-muted {
+    font-size: 1.2rem;
+    color: #6c757d;
 }
 
 
