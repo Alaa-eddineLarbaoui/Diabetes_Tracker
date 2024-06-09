@@ -3,8 +3,8 @@ package com.Service;
 import com.beans.GlucoseReading;
 import com.beans.Nourriture;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface NourritureDAO {
-    ArrayList<Nourriture> ShowNourriture();
+    List<Nourriture> ShowNourriture(Integer idNourr);
 }

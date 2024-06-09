@@ -33,8 +33,9 @@
                         Food
                     </a>
                     <ul class="dropdown-menu" style="">
-                        <li><a class="dropdown-item" href="#">meats</a></li>
-                        <li><a class="dropdown-item" href="#">fruits</a></li>
+                        <li><a class="dropdown-item" href="ShowNourriture?id=1">meat</a></li>
+                        <li><a class="dropdown-item" href="ShowNourriture?id=2">fruits</a></li>
+
                         <li><a class="dropdown-item" href="#">vegetables</a></li>
                     </ul>
                 </div>

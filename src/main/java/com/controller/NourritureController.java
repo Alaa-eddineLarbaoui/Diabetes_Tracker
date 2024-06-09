@@ -8,8 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -22,11 +21,14 @@ public class NourritureController {
 
 
     @RequestMapping("/ShowNourriture")
-    public String show(Model model){
+    public String ShowNourritureById(@RequestParam("id") int idNou, Model model){
         // model.addAttribute("diabete",new GlucoseReading());
-        model.addAttribute("Nourritures",  Nourri.ShowNourriture());
-        return "ShowNou";
+        Nourri.ShowNourriture(idNou);
+        model.addAttribute("Nourritures",  Nourri.ShowNourriture(idNou));
+        return "ShowNourriture";
     }
+
+
 
 
 

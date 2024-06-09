@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @Service
 public class NourritureDAOImpl implements NourritureDAO {
@@ -18,7 +20,7 @@ public class NourritureDAOImpl implements NourritureDAO {
 
     @Transactional
     @Override
-    public ArrayList<Nourriture> ShowNourriture() {
-        return (ArrayList<Nourriture>) Nourr.findAll();
+    public List<Nourriture> ShowNourriture(Integer idNourr) {
+        return Nourr.findAllById(Collections.singletonList(idNourr));
     }
 }
