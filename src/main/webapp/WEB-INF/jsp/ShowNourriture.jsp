@@ -18,7 +18,7 @@
 
     }
     .header {
-        background-color: #0aa447;
+        background: url(https://assets.mynetdiary.com/images/texture-noise@1x.png), radial-gradient(ellipse at top, #05b24a 0, #05963d 60%);
         color: white;
         padding: 10px 0;
         border-bottom-right-radius: 100rem 5rem;
@@ -120,6 +120,7 @@
         z-index: 2;
         border-bottom-right-radius: 100rem 5rem;
         border-bottom-left-radius: 100rem 5rem;
+        margin-top: 52px;
     }
 
     .titre{
@@ -233,7 +234,7 @@
                     </a>
                     <ul class="dropdown-menu" style="">
                         <li><a class="dropdown-item" href="ShowNourriture?id=1">meat</a></li>
-                        <li><a class="dropdown-item" href="ShowNourriture?id=2">fruits</a></li>
+                        <li><a class="dropdown-item" href="ShowNourriture?genre=fruit">fruits</a></li>
                         <li><a class="dropdown-item"  href="ShowNourriture?id=3">vegetables</a></li>
                     </ul>
                 </div>
@@ -249,18 +250,19 @@
         </div>
     </div>
     <div class="titre">
-        <h1 class="page-title">Food</h1>
+        <h1 class="page-title">No more guesswork around meals</h1>
     </div>
 
 </header>
 
 
-<c:forEach var="Nou" items="${Nourritures}">
+
 <div class="container mt-5">
+    <c:forEach var="Nou" items="${Nourritures}">
 
         <div class="food-item row align-items-center mb-3">
             <div class="col-md-1 text-center">
-                <img src="${Nou.getPhoto_url()}" alt="${Nou.getNom_Nourriture()}" style="width: 50px; height: auto;">
+                <img src="${Nou.getPhoto_url()}" alt="${Nou.getNom_Nourriture()}" style="width: 60px; height: auto;">
             </div>
             <div class="col-md-8">
                 <h5>${Nou.getNom_Nourriture()} <span class="font-weight-bold"> : </span> ${Nou.getAvantages_Nourriture()}</h5>

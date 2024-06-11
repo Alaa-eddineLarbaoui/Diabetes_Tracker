@@ -20,7 +20,9 @@ public class NourritureDAOImpl implements NourritureDAO {
 
     @Transactional
     @Override
-    public List<Nourriture> ShowNourriture(Integer idNourr) {
-        return Nourr.findAllById(Collections.singletonList(idNourr));
+    public List<Nourriture> ShowNourriture(String genre) {
+
+        return Nourr.findByGenre(genre);
     }
+
 }

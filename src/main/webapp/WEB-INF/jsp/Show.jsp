@@ -20,7 +20,7 @@
 
         }
         .header {
-            background-color: #0aa447;
+            background: url(https://assets.mynetdiary.com/images/texture-noise@1x.png), radial-gradient(ellipse at top, #05b24a 0, #05963d 60%);
             color: white;
             padding: 10px 0;
             border-bottom-right-radius: 100rem 5rem;
@@ -111,7 +111,6 @@
 
         .page-title {
             text-align: center;
-
             color: white;
             padding: 20px 0;
             font-size: 3rem;
@@ -122,6 +121,7 @@
             z-index: 2;
             border-bottom-right-radius: 100rem 5rem;
             border-bottom-left-radius: 100rem 5rem;
+            margin-top: 52px;
         }
 
         .titre{
@@ -162,7 +162,7 @@
                     </a>
                     <ul class="dropdown-menu" style="">
                         <li><a class="dropdown-item" href="ShowNourriture?id=1">meat</a></li>
-                        <li><a class="dropdown-item" href="ShowNourriture?id=2">fruits</a></li>
+                        <li><a class="dropdown-item" href="ShowNourriture?genre=fruit">fruits</a></li>
                         <li><a class="dropdown-item"  href="ShowNourriture?id=3">vegetables</a></li>
                     </ul>
                 </div>
@@ -178,7 +178,7 @@
         </div>
     </div>
     <div class="titre">
-        <h1 class="page-title">Food</h1>
+        <h1 class="page-title">View your diabetes records</h1>
     </div>
 
 </header>

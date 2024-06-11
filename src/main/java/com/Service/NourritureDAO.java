@@ -6,5 +6,5 @@ import com.beans.Nourriture;
 import java.util.List;
 
 public interface NourritureDAO {
-    List<Nourriture> ShowNourriture(Integer idNourr);
+    List<Nourriture> ShowNourriture(String genre);
 }

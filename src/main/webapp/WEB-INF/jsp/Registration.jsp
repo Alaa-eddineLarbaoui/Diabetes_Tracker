@@ -25,7 +25,7 @@
 
     }
     .header {
-        background-color: #0aa447;
+        background: url(https://assets.mynetdiary.com/images/texture-noise@1x.png), radial-gradient(ellipse at top, #05b24a 0, #05963d 60%);
         color: white;
         padding: 10px 0;
         border-bottom-right-radius: 100rem 5rem;
@@ -136,18 +136,20 @@
 
     .container {
         width: 100%;
-        margin: 50px auto;
+        margin-top: 50px;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         background-color: #FCEDE9;
-
+        align-content: center;
+        height: 190px;
         max-width: none;
     }
 
     h1 {
         text-align: center;
-        color: #333;
+        color: #268fd0;
+        margin: 50px auto;
     }
 
     form {
@@ -168,15 +170,21 @@
     }
 
     button[type="submit"] {
-        background-color: #007bff;
-        color: #fff;
+        margin: 10px 0;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #fe5353; /* Nouvelle couleur de fond */
+        color: #333; /* Nouvelle couleur du texte */
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
 
     button[type="submit"]:hover {
-        background-color: #0056b3;
+        background-color: #FAB4C0; /* Couleur de fond au survol */
     }
+
 
     .input {
         display: flex;
@@ -197,7 +205,6 @@
     }
     .btn2{
         display: flex;
-        justify-content: end;
         width: 60%;
     }
 
@@ -226,8 +233,8 @@
                         Food
                     </a>
                     <ul class="dropdown-menu" style="">
-                        <li><a class="dropdown-item" href="ShowNourriture?id=1">meat</a></li>
-                        <li><a class="dropdown-item" href="ShowNourriture?id=2">fruits</a></li>
+                        <li><a class="dropdown-item" href="ShowNourriture?genre=meat">meat</a></li>
+                        <li><a class="dropdown-item" href="ShowNourriture?genre=fruit">fruits</a></li>
                         <li><a class="dropdown-item"  href="ShowNourriture?id=3">vegetables</a></li>
                     </ul>
                 </div>
@@ -244,14 +251,17 @@
         </div>
     </div>
     <div class="titre">
-        <h1 class="page-title">Food</h1>
+        <h1 class="page-title">Registration</h1>
     </div>
 
 </header>
 
 
+<h1>Formulaire de suivi du diabate</h1>
+
+
 <div class="container">
-    <h1>Formulaire de suivi du diabète</h1>
+
     <form method="post" action="save">
 
 
@@ -265,20 +275,19 @@
             <div>
                 <input type="number" name="value_Glucose" placeholder="Niveau de glucose (mg/dL)" required>
             </div>
+            <div class="btn2">
+                <button type="submit">
+                    Ajouter <i class="bi bi-plus"></i>
+                </button>
+            </div>
         </div>
 
-        <div class="btn2">
-            <button type="submit">
-                Ajouter <i class="bi bi-plus"></i>
-            </button>
-        </div>
+
 
     </form>
 </div>
 
 
-<a href="/DiabetesTracker_war_exploded/ShowInfo">
-    Page show
-</a>
+
 </body>
 </html>

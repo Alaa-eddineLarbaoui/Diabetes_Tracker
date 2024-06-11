@@ -8,6 +8,7 @@ public class Nourriture {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Integer idNourriture;
 
     @Column
@@ -39,6 +40,10 @@ public class Nourriture {
 
     @Column
     private Integer cal;
+
+    @Column
+    private String genre;
+
 
     // Constructeur sans paramètres
     public Nourriture() {}
@@ -130,6 +135,14 @@ public class Nourriture {
 
     public void setCal(Integer cal) {
         this.cal = cal;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     @Override
