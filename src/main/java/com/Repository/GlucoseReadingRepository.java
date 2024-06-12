@@ -4,8 +4,8 @@ import com.beans.GlucoseReading;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 
-public interface GlucoseReadingRepository  extends JpaRepository<GlucoseReading, Integer> {
+@Repository
+public interface GlucoseReadingRepository extends JpaRepository<GlucoseReading, Integer> {
 }
-
-

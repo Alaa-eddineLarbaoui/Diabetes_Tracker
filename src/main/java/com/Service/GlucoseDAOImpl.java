@@ -7,18 +7,20 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
-public class GlucoseDAOImpl implements GlucoseDAO{
+public class GlucoseDAOImpl implements GlucoseDAO {
 
     @Autowired
     private GlucoseReadingRepository rd;
+
     @Override
     @Transactional
     public void Add(GlucoseReading gr) {
         rd.save(gr);
-
     }
+
     @Override
     public ArrayList<GlucoseReading> ShowDiabetes() {
         return (ArrayList<GlucoseReading>) rd.findAll();
@@ -28,4 +30,6 @@ public class GlucoseDAOImpl implements GlucoseDAO{
     public void delete(Integer id) {
         rd.deleteById(id);
     }
+
+
 }

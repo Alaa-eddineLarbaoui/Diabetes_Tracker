@@ -19,7 +19,7 @@
 <header class="header">
     <div class="container1">
         <div class="logo">
-            <img src="${pageContext.request.contextPath}/resources/img/logo.png" alt="Logo">
+            <img src="${pageContext.request.contextPath}/resources/img/image.png" alt="Logo">
             <span>Diabete Tracker</span>
         </div>
         <nav class="nav">
@@ -52,7 +52,8 @@
         </div>
     </div>
     <div class="titre">
-        <img class="img-header" src="https://media.baamboozle.comploads/images/5698/1519890717_129992" alt="">
+        <img class="img-header" src="${pageContext.request.contextPath}/resources/img/img.png" alt="Logo">
+
         <div class="about">
             <h1>hello test tetst vdgqg dtvsdvsdb <br>hrfhhdfh hfhhf hfhdhhdf </h1>
         </div>

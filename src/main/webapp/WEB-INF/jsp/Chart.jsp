@@ -25,7 +25,7 @@
         padding: 0;
         font-family: Arial, sans-serif;
         /*background-color: #ffddd3;*/
-        background-color: #fff;
+        background-color: #f8f9fa;
 
 
     }
@@ -52,8 +52,9 @@
     }
 
     .logo img {
-        height: 40px;
-        margin-right: 10px;
+        height: 50px;
+        margin-right: 0px;
+        padding-bottom: 8px;
     }
 
     .logo span {
@@ -143,7 +144,7 @@
 <header class="header">
     <div class="container1">
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <img src="${pageContext.request.contextPath}/resources/img/image.png" alt="Logo">
             <span>Diabete Tracker</span>
         </div>
         <nav class="nav">
@@ -158,7 +159,7 @@
                         Food
                     </a>
                     <ul class="dropdown-menu" style="">
-                        <li><a class="dropdown-item" href="ShowNourriture?id=1">meat</a></li>
+                        <li><a class="dropdown-item" href="ShowNourriture?genre=meat">meat</a></li>
                         <li><a class="dropdown-item" href="ShowNourriture?genre=fruit">fruits</a></li>
                         <li><a class="dropdown-item"  href="ShowNourriture?id=3">vegetables</a></li>
                     </ul>
