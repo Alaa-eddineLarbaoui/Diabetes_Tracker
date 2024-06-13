@@ -48,6 +48,7 @@ public class DiabeteController {
         glucose.setTime_of_tracking(Time.valueOf(time));
         glucose.setValue_Glucose(value);
 
+
         // Save the GlucoseReading object
         glucoseDAO.Add(glucose);
 

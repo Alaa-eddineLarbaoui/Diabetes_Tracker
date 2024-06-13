@@ -55,7 +55,7 @@
         <img class="img-header" src="${pageContext.request.contextPath}/resources/img/img.png" alt="Logo">
 
         <div class="about">
-            <h1>hello test tetst vdgqg dtvsdvsdb <br>hrfhhdfh hfhhf hfhdhhdf </h1>
+            <h1>Diabetes Management <br> Suite  </h1>
         </div>
     </div>
 </header>

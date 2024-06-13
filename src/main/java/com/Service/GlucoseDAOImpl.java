@@ -31,5 +31,4 @@ public class GlucoseDAOImpl implements GlucoseDAO {
         rd.deleteById(id);
     }
 
-
 }
